@@ -8,6 +8,7 @@
 :root {
     --white: #fff;
     --black: #111;
+    /* --black: linear-gradient(#0b004e, #1d152f, #002834); */
     --blue: #3a80e9;
     --grey: #888;
     --darkgrey: #1b1b1b;
@@ -44,4 +45,11 @@
 ::-webkit-scrollbar-thumb {
   background: var(--grey);
   border-radius: 10px;
+}
+
+img {
+-webkit-user-drag: none;
+-khtml-user-drag: none;
+-moz-user-drag: none;
+-o-user-drag: none;
 }

@@ -1,15 +1,26 @@
 import { useState } from 'react'
-import Header from './components/Common/Header'
-import Footer from './components/Common/Footer'
-import MainComponents from './components/LandingPage/MainComponents'
+import Home from "./pages/Home"
+import Dashboard from "./pages/Dashboard"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 function App() {
 
+  
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:<Home />,
+  },
+  {
+    path: "/dashboard",
+    element:<Dashboard />,
+  },
+  
+]);
+
   return (
     <div>
-    <Header />
-    <MainComponents />
-    {/* <Footer /> */}
+     <RouterProvider router={router} />
     </div>
   
   )
