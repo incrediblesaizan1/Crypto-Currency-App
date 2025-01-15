@@ -20,6 +20,9 @@ export default {
         black: 'black',
         white: 'white',
       },
+      backgroundColor: {
+        'custom-dark': 'linear-gradient(315deg, #2b4162 0%, #12100e 74%)',
+      },
     },
   },
   plugins: [

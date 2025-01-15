@@ -14,6 +14,7 @@
     --darkgrey: #1b1b1b;
     --green: #61c96f;
     --red: #f94141;
+    --gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 11%, rgba(0,212,255,1) 100%);
   }
 
 

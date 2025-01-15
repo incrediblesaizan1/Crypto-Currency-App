@@ -30,7 +30,9 @@ const MainComponents = () => {
       animate={{opacity:1, translateX:0, }}
       transition={{duration:1, delay:1.5}}
       className='flex justify-start items-center gap-6 mt-8'>
-        <Button text="Dashboard" />
+        <Button onclick={()=>{
+          window.location.href = "/dashboard"
+        }} text="Dashboard" />
         <Button text="Share" outline={true} />
       </motion.div>
        </div>

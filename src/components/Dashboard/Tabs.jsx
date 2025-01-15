@@ -19,12 +19,13 @@ export default function Tabs({ coins }) {
     width: "50vw",
     fontSize: "1.2rem",
     textTransform: "capitalize",
+    background: " linear-gradient(301deg, rgba(0, 0, 0, 1), rgba(10, 10, 10, 1))",
   };
 
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#3a80e9",
+        main: "#fff",
       },
     },
   });
