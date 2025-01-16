@@ -4,7 +4,7 @@ background-image: linear-gradient(315deg, #000000 0%, #212022 94%);
 
 .highlight-a a{
 text-decoration: underline;
-color: var(--grey);
+color: var(--green);
 }
  
 .highlight-a a:hover{
