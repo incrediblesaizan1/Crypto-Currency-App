@@ -27,12 +27,12 @@ const List = ({coin, i}) => {
 
       <Tooltip title={`Symbol`}>
       <div className=" ml-1 sm:ml-6 md:ml-8 lg:ml-10 xl:ml-12 w-10 sm:w-12 md:w-16 lg:w-20 xl:w-24">
-        <div className=" text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl uppercase text-[var(--white)] font-semibold">
+        <div className=" text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl uppercase text-[var(--white)] font-semibold">
           {coin.symbol}
         </div>
 
         <Tooltip title={`Name`}>
-        <div className=" text-[8px] sm:text-[10px] md:text-sm lg:text-sm xl:text-sm text-[var(--grey)] mt-[-6px] sm:mt-[-3px]">{coin.name}</div>
+        <div className=" text-[7px] sm:text-[10px] md:text-sm lg:text-sm xl:text-sm text-[var(--grey)] mt-[-3px] sm:mt-[-3px]">{coin.name}</div>
         </Tooltip>
       </div>
  </Tooltip>
