@@ -19,9 +19,9 @@ const CoinInfo = ({ heading, description }) => {
        className={`highlight-a pt-3 text-xs sm:text-sm md:text-base ${!isExpanded && "cursor-pointer"}`}
         dangerouslySetInnerHTML={{ __html: longDesc2 }}
         ></p>}
-        {description.length == 0? <p>
+        {description.length == 0 && <p>
         There is no description available
-        </p>:""}
+        </p>}
     </div>
   );
 };
