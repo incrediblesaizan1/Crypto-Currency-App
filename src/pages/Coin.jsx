@@ -5,6 +5,7 @@ import Loader from '../components/Common/Loader'
 import {ConvertObject} from "../functions/ConvertObject"
 import axios from 'axios'
 import List from '../components/Dashboard/List'
+import CoinInfo from '../components/Coin/CoinInfo'
 
 const CoinPage = () => {
   const {id} = useParams()
@@ -24,14 +25,13 @@ const CoinPage = () => {
     }
   }, [id])
 
-  
-
   return (
     <div>
       <Header />
       <div className=' mx-auto pl-3 rounded-3xl w-[94vw] md:w-[99vw]'>
       {isLoading? <Loader />: <List  coin={coin} />}
       </div>
+      {isLoading? <Loader />: <CoinInfo heading={coin.name} description={coin.desc} />}
     </div>
   )
 }
