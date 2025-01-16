@@ -4,12 +4,13 @@ import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { motion } from "framer-motion";
 import { Tooltip } from "@mui/material";
 import {ConvertNumber} from "../../functions/ConvertNumber"
+import { NavLink } from 'react-router-dom';
 
 const List = ({coin, i}) => {
 
   return (
 
-    <motion.div
+     <NavLink to={`/coin/${coin.id}`} ><motion.div
     initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
@@ -110,7 +111,7 @@ const List = ({coin, i}) => {
         </div>
         </Tooltip>
 
-    </motion.div>
+    </motion.div></NavLink>
   )
 }
 
