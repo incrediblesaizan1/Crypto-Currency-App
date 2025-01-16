@@ -30,7 +30,7 @@ const CoinPage = () => {
   return (
     <div>
       <Header />
-      <div className='mx-7'>
+      <div className='ml-14'>
       {isLoading? <Loader />: <List  coin={coin} />}
       </div>
     </div>
