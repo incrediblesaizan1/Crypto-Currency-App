@@ -30,7 +30,7 @@ const CoinPage = () => {
   return (
     <div>
       <Header />
-      <div className=' mx-auto pl-3 rounded-3xl bg-[var(--darkgrey)] w-[96vw]'>
+      <div className=' mx-auto pl-3 rounded-3xl bg-[var(--darkgrey)] w-[93vw]'>
       {isLoading? <Loader />: <List  coin={coin} />}
       </div>
     </div>
