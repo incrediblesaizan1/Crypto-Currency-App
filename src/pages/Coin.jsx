@@ -24,7 +24,6 @@ const CoinPage = () => {
     }
   }, [id])
 
-  console.log(coin)
   
 
   return (
