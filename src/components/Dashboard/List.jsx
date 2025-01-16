@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Tooltip } from "@mui/material";
 import {ConvertNumber} from "../../functions/ConvertNumber"
 import { NavLink } from 'react-router-dom';
+import "./style.css"
 
 const List = ({coin, i}) => {
 
@@ -14,7 +15,7 @@ const List = ({coin, i}) => {
     initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className='ml-[-0.94rem] m-2 px-4  w-[95vw] h-12 md:h-20 lg:h-28 xl:h-32 hover:bg-[var(--darkgrey)] rounded-2xl  sm:rounded-3xl flex items-center gap-4 '
+      className=' ml-[-0.94rem] md:ml-[1.3rem] m-2 px-4  w-[95vw] h-12 md:h-20 bx lg:h-28 xl:h-32  hover:bg-[var(--darkgrey)] rounded-2xl  sm:rounded-3xl flex items-center gap-4 '
       >
 
 <Tooltip title={`${coin.name} logo`}>
