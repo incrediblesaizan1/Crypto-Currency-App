@@ -9,11 +9,15 @@ const CoinInfo = ({ heading, description }) => {
   return (
     <div className='block w-[95vw] rounded-3xl bg-[var(--darkgrey)] my-5 mx-auto break-words py-4 px-6 text-left'>
       <h2 className=' text-2xl md:text-3xl font-semibold'>{heading}</h2>
-      <p 
+      {description.length > 200?<p 
       onClick={()=>setIsExpanded(!isExpanded)}
-      className='highlight-a pt-3 text-xs sm:text-sm md:text-base'
+      className={`highlight-a pt-3 text-xs sm:text-sm md:text-base ${!isExpanded && "cursor-pointer"}`}
        dangerouslySetInnerHTML={{ __html: isExpanded?shortDesc:longDesc }}
-       ></p>
+       ></p>:<p 
+       onClick={()=>setIsExpanded(!isExpanded)}
+       className={`highlight-a pt-3 text-xs sm:text-sm md:text-base ${!isExpanded && "cursor-pointer"}`}
+        dangerouslySetInnerHTML={{ __html: longDesc }}
+        ></p>}
     </div>
   );
 };
