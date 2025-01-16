@@ -5,7 +5,7 @@ import "./style.css"
 
 const Grid = ({ coin, i }) => {
   return (
-    <div className={` bx ${coin.price_change_percentage_24h > 0 ?"hover:border-2 hover:border-solid hover:border-[var(--green)]":"hover:border-2 hover:border-solid hover:border-[var(--red)]"} w-[342px]  h-[320px]  border-2 border-solid border-[var(--darkgrey)] rounded-xl`} >
+    <div onClick={()=>window.location.href = `/coin/${coin.id}`} className={` bx ${coin.price_change_percentage_24h > 0 ?"hover:border-2 hover:border-solid hover:border-[var(--green)]":"hover:border-2 hover:border-solid hover:border-[var(--red)]"} w-[342px]  h-[320px]  border-2 border-solid border-[var(--darkgrey)] rounded-xl`} >
 
       <div className="flex m-6 justify-start items-center gap-4">
         <img className="h-14 w-14" src={coin.image} alt={coin.logo} />

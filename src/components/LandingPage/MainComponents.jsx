@@ -3,6 +3,7 @@ import Button from "../Common/Button"
 import iPhone from "../../assets/iphone.png"
 import gradient from "../../assets/gradient.png"
 import {motion} from "framer-motion"
+import { NavLink } from 'react-router-dom'
 
 const MainComponents = () => {
   return (
@@ -30,9 +31,7 @@ const MainComponents = () => {
       animate={{opacity:1, translateX:0, }}
       transition={{duration:1, delay:1.5}}
       className='flex justify-start items-center gap-6 mt-8'>
-        <Button onclick={()=>{
-          window.location.href = "/dashboard"
-        }} text="Dashboard" />
+           <NavLink to="/dashboard"><Button text="Dashboard" /></NavLink>
         <Button text="Share" outline={true} />
       </motion.div>
        </div>

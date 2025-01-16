@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Home from "./pages/Home"
 import Dashboard from "./pages/Dashboard"
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Coin from './pages/Coin';
 
 function App() {
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element:<Dashboard />,
   },
+  {
+    path:"/coin/:id",
+    element:<Coin />,
+  }
   
 ]);
 
