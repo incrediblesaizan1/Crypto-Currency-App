@@ -19,7 +19,7 @@ export default function Tabs({ coins }) {
     width: "50vw",
     fontSize: "1.2rem",
     textTransform: "capitalize",
-    background: " linear-gradient(301deg, rgba(0, 0, 0, 1), rgba(10, 10, 10, 1))",
+    background: " linear-gradient(210deg, #000000 0%, #150c1d 94%)",
   };
 
   const theme = createTheme({

@@ -15,6 +15,7 @@
     --green: #61c96f;
     --red: #f94141;
     --gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 11%, rgba(0,212,255,1) 100%);
+    --gradient2: linear-gradient(315deg, #000000 0%, #212022 94%);
   }
 
 
@@ -23,7 +24,7 @@
         font-family: "Inter", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: var(--black);
+        background: linear-gradient(to right, #000000, #0e0e1a, #07071b);
         color: var(--white);
         overflow-x: hidden;
       }

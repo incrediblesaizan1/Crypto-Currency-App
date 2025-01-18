@@ -1,6 +1,10 @@
 .bx{
 /* background-image: linear-gradient(315deg, #000000 0%, #212022 94%); */
 background-image: linear-gradient(210deg, #000000 0%, #150c1d 94%);
+/* background-image: linear-gradient(210deg, #100808 0%, #756b7e 94%);; */
+}
+.bx2{
+background: linear-gradient(315deg, #000000 0%, #1a1122 94%);
 }
 
 .highlight-a a{
