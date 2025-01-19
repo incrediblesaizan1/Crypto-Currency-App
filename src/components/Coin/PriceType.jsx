@@ -3,12 +3,8 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useState } from 'react';
 
-export default function ColorToggleButton() {
-  const [alignment, setAlignment] = useState('price');
-
-  const handleChange = (event, newAlignment) => {
-    setAlignment(newAlignment);
-  };
+export default function TogglePriceType({priceType,handlePriceTypeChange}) {
+ 
 
   return (
     <ToggleButtonGroup
@@ -17,14 +13,14 @@ export default function ColorToggleButton() {
         color: 'white',
     }}
       color="primary"
-      value={alignment}
+      value={priceType}
       exclusive
-      onChange={handleChange}
+      onChange={handlePriceTypeChange}
       aria-label="Platform"
     >
-      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="price">PRICE</ToggleButton>
-      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="android">MKT CAP</ToggleButton>
-      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="ios">VOLUME</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="prices">PRICE</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="market_caps">MKT CAP</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="total_volumes">VOLUME</ToggleButton>
     </ToggleButtonGroup>
   );
 }
