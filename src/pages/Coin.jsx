@@ -75,11 +75,11 @@ const CoinPage = () => {
   return (
     <div>
       <Header />
-      <div className=" mx-auto pl-3 my-2 md:my-0 rounded-3xl w-[94vw] md:w-[99vw]">
+      <div className=" mx-auto pl-3 my-5 md:my-0 rounded-3xl w-[94vw] md:w-[99vw]">
         {isLoading ? <Loader /> : <List coin={coin} />}
       </div>
 
-      <div className=" mx-auto md:p-6 bx rounded-3xl w-[92vw] md:w-[95vw]">
+      <div className=" mx-auto md:p-6 mt-8 mb-12 md:mt-0 md:mb-0 bx rounded-3xl w-[92vw] md:w-[95vw]">
 
         <div className=" mb-5 w-[8vw]">
           <SelectDays days={days} handleDaysChange={handleDaysChange} />
