@@ -86,9 +86,9 @@ const CoinPage = () => {
         </div>
 
 
-        {/* <div className="text-center mb-5">
+        <div className="text-center mb-5">
           <PriceType />
-        </div> */}
+        </div>
 
 
         {isLoading ? <Loader /> : <LineChart chartData={chartData} />}
