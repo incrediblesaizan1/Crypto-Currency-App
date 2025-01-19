@@ -12,6 +12,7 @@ import SelectDays from "../components/Coin/SelectDays";
 import PriceType from "../components/Coin/PriceType";
 import List from "../components/Dashboard/List";
 import CoinInfo from "../components/Coin/CoinInfo";
+import { ConvertNumber } from "../functions/ConvertNumber";
 
 const CoinPage = () => {
   const { id } = useParams();

@@ -1,4 +1,8 @@
+
 export const ConvertNumber = (number) => {
+    if(number == 0 || number < 0){
+        return number;
+    }
     if (number) {
         if (number < 1000) {
             return number;
