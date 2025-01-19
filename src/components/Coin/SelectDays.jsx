@@ -18,7 +18,13 @@ export default function SelectDays({days, handleDaysChange}) {
         background: 'linear-gradient(210deg, #000000 0%, #150c1d 94%);',
       }}
     >
-      <FormControl fullWidth>
+      <FormControl sx={{
+    width: {
+      xs: "93px", 
+      sm: "100px", 
+      md: "120px", 
+    }
+  }}>
         <InputLabel
           sx={{
             color: 'var(--white)', // Default color
@@ -57,7 +63,6 @@ export default function SelectDays({days, handleDaysChange}) {
           <MenuItem value={7}>7 Days</MenuItem>
           <MenuItem value={30}>30 Days</MenuItem>
           <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={90}>90 Days</MenuItem>
           <MenuItem value={120}>120 Days</MenuItem>
           <MenuItem value={365}>1 Year</MenuItem>
         </Select>

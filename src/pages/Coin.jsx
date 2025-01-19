@@ -15,6 +15,7 @@ import { Dataset } from "@mui/icons-material";
 import "../components/Dashboard/style.css";
 import { convertDate } from "../functions/ConvertDate";
 import SelectDays from "../components/Coin/SelectDays";
+import PriceType from "../components/Coin/PriceType";
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -78,11 +79,17 @@ const CoinPage = () => {
         {isLoading ? <Loader /> : <List coin={coin} />}
       </div>
 
-      <div className=" mx-auto p-6 bx rounded-3xl w-[92vw] md:w-[95vw]">
+      <div className=" mx-auto md:p-6 bx rounded-3xl w-[92vw] md:w-[95vw]">
 
         <div className=" mb-5 w-[8vw]">
           <SelectDays days={days} handleDaysChange={handleDaysChange} />
         </div>
+
+
+        {/* <div className="text-center mb-5">
+          <PriceType />
+        </div> */}
+
 
         {isLoading ? <Loader /> : <LineChart chartData={chartData} />}
       </div>
