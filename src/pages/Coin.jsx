@@ -75,7 +75,7 @@ const CoinPage = () => {
   return (
     <div>
       <Header />
-      <div className=" mx-auto pl-3 rounded-3xl w-[94vw] md:w-[99vw]">
+      <div className=" mx-auto pl-3 my-2 md:my-0 rounded-3xl w-[94vw] md:w-[99vw]">
         {isLoading ? <Loader /> : <List coin={coin} />}
       </div>
 
