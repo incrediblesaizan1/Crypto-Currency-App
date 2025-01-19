@@ -22,9 +22,9 @@ export default function ColorToggleButton() {
       onChange={handleChange}
       aria-label="Platform"
     >
-      <ToggleButton sx={{color: "white", width: "120px"}} value="price">PRICE</ToggleButton>
-      <ToggleButton sx={{color: "white", width: "120px"}} value="android">MKT CAP</ToggleButton>
-      <ToggleButton sx={{color: "white", width: "120px"}} value="ios">VOLUME</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="price">PRICE</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="android">MKT CAP</ToggleButton>
+      <ToggleButton sx={{color: "white", height:{xs:"40px",md:"50px"} ,width:{xs:"90px", md: "150px"}}} value="ios">VOLUME</ToggleButton>
     </ToggleButtonGroup>
   );
 }
