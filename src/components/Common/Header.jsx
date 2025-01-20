@@ -11,8 +11,6 @@ const Header = () => {
 <div>
 <div className="hidden justify-end items-center gap-6 md:flex lg:flex ">
         <NavLink to="/"  className={(e)=>e.isActive?"font-semibold text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>Home</p></NavLink>
-        <NavLink to="/compare"  className={(e)=>e.isActive?"font-semibold text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>Compare</p></NavLink>
-        <NavLink to="/watchlist"  className={(e)=>e.isActive?"font-semibold text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>WatchList</p></NavLink>
         <NavLink to="/dashboard"><Button text="Dashboard" /></NavLink>
       </div>
       <div className='sm:flex md:hidden lg:hidden w-full mr-[-50px] '>
