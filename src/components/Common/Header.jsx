@@ -1,7 +1,6 @@
 import React from 'react';
 import Hambuger from './Hambuger';
 import Button from './Button';
-import { Flag } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
