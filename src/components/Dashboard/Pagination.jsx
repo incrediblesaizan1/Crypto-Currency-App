@@ -22,7 +22,7 @@ export default function PaginationControlled({page, handlePageChange  }) {
             border: "none",
           },
         }}
-        count={25}
+        count={10}
          page={page}
           onChange={handlePageChange}
           

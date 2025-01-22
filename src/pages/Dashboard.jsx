@@ -8,50 +8,56 @@ import "../components/Dashboard/style.css"
 import PaginationControll from "../components/Dashboard/Pagination"
 
 const Dashboard = () => {
-const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("")
   const [coins, setCoins] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
   const [paginatedCoin, setPaginatedCoin] = useState([])
-   const [currency, setCurrency] = useState("inr")
-    const [page, setPage] = useState(1)
-    const [isLoading, setIsLoading] = useState(true)
+  const [page, setPage] = useState(1)
 
-    const handlePageChange = (event, value) =>{
-      setPage(value)
-      let previousIndex = (value - 1) * 10
-      setPaginatedCoin(coins.slice(previousIndex, previousIndex + 10))
-    }
-
-  const onSearchChange = (e) =>{
+  const onSearchChange = (e) => {
     setSearch(e.target.value)
   }
 
-  const filterCoin = coins.filter((item)=>(
-    item.name.toLowerCase().includes(search.toLowerCase()) || item.symbol.toLowerCase().includes(search.toLowerCase())
-  ))
- 
- useEffect(() => {
-   axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=250&page=1&sparkline=false`)
-  .then(res => {
-    setCoins(res.data)
-    setPaginatedCoin(res.data.slice(0, 10))
-    setIsLoading(false)
-  }).catch(error =>{
-    console.log("Some Error Occured While Fetching Data", error)
-    setIsLoading(false)
+  const handlePageChange = (event, value) => {
+    setPage(value)
+  }
 
-  })
- }, [])
- 
+  // Filter coins based on search
+  const filterCoin = coins.filter((item) =>
+    item.name.toLowerCase().includes(search.toLowerCase()) || 
+    item.symbol.toLowerCase().includes(search.toLowerCase())
+  )
 
+  useEffect(() => {
+    axios.get(`https://api.coinranking.com/v2/coins?limit=100&x-access-token=coinranking0d42595f0df39d313aa26e81a583600af7574cdbde528344`)
+      .then(res => {
+        setCoins(res.data.data.coins)
+        setIsLoading(false)
+      }).catch(error => {
+        console.log("Some Error Occurred While Fetching Data", error)
+        setIsLoading(false)
+      })
+  }, [])
+
+  useEffect(() => {
+    const filteredCoins = filterCoin
+
+    const indexOfLast = page * 10
+    const indexOfFirst = indexOfLast - 10
+
+    setPaginatedCoin(filteredCoins.slice(indexOfFirst, indexOfLast))
+  }, [page, search, coins]) 
   return (
-   <>
-    <Header />
-   {isLoading?<Loader />: <div>
-      < Search onSearchChange={onSearchChange} search={search} />
-      <Tabs coins={search?filterCoin:paginatedCoin} />
-     { !search && <PaginationControll page={page} handlePageChange={handlePageChange} />}
-    </div>}
-   </>
+    <>
+      <Header />
+      {isLoading ? <Loader /> : (
+        <div>
+          <Search onSearchChange={onSearchChange} search={search} />
+          <Tabs coins={paginatedCoin} /> 
+          { !search && <PaginationControll page={page} handlePageChange={handlePageChange} /> }
+        </div>
+      )}
+    </>
   )
 }
 

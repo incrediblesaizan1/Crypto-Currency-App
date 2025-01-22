@@ -60,11 +60,10 @@ export default function SelectDays({days, handleDaysChange}) {
           label="Days"
           onChange={handleDaysChange}
         >
-          <MenuItem value={7}>7 Days</MenuItem>
-          <MenuItem value={30}>30 Days</MenuItem>
-          <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={120}>120 Days</MenuItem>
-          <MenuItem value={365}>1 Year</MenuItem>
+          <MenuItem value={"7d"}>7 Days</MenuItem>
+          <MenuItem value={"30d"}>30 Days</MenuItem>
+            <MenuItem value={"3m"}>3 Months</MenuItem>
+          <MenuItem value={"1y"}>1 Year</MenuItem>
         </Select>
       </FormControl>
     </div>

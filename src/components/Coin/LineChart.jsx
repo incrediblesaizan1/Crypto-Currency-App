@@ -20,7 +20,7 @@ function LineChart({ chartData, multiAxis }) {
       y:{
         ticks:{
           callback: function(value, index, ticks) {
-     return "₹" + ConvertNumber(value).toLocaleString();
+     return "$" + ConvertNumber(value).toLocaleString();
           }
         }
       }

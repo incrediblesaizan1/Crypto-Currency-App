@@ -13,7 +13,6 @@ export default function Tabs({ coins }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   const style = {
     color: "var(--white)",
     width: "50vw",
