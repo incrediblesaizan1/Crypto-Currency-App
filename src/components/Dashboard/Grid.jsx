@@ -42,13 +42,13 @@ const Grid = ({ coin, i }) => {
 {coin.change > 0 ? (
   <div className="m-6">
     <h3 className="text-[var(--green)] text-xl font-[600]">
-      ${Number(coin.price).toFixed(2).toLocaleString()}
+     ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
     </h3>
   </div>
 ) : (
   <div className="m-6">
     <h3 className="text-[var(--red)] text-xl font-[600]">
-      ${Number(coin.price).toFixed(2).toLocaleString()}
+     ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
     </h3>
   </div>
 )}

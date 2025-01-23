@@ -65,13 +65,13 @@ const List = ({coin, i}) => {
       {coin.change > 0 ? (
         <div className=" md:m-4 lg:m-6 w-20 sm:w-24 md:w-32 lg:w-40">
           <h3 className="text-[var(--green)] text-xs sm:text-base md:text-xl lg:text-3xl w-10 sm:w-24 md:w-32 lg:w-44 text-start font[600]">
-              ${Number(coin.price).toFixed(2).toLocaleString()}
+                ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </h3>
         </div>
       ) : (
         <div className=" md:m-4 lg:m-6 w-20 sm:w-24 md:w-32 lg:w-40">
           <h3 className="text-[var(--red)] text-xs sm:text-base md:text-xl lg:text-3xl w-10 sm:w-24 md:w-32 lg:w-44 text-start font[600]">
-              ${Number(coin.price).toFixed(2).toLocaleString()}
+                ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </h3>
         </div>
       )}
