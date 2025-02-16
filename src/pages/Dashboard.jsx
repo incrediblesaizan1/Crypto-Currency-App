@@ -22,7 +22,6 @@ const Dashboard = () => {
     setPage(value)
   }
 
-  // Filter coins based on search
   const filterCoin = coins.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase()) || 
     item.symbol.toLowerCase().includes(search.toLowerCase())
