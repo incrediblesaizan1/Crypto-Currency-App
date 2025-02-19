@@ -24,7 +24,7 @@ const SelectCoin = ({crypto1,crypto2, handleCoinChange}) => {
 
         <div className='flex flex-col items-start'>
             <p className="text-sm font-semibold">Crypto 1</p>
-            <FormControl sx={{ width: 180 }}>
+            <FormControl sx={{ width: 158 }}>
                 <Select
                     sx={{
                         color: 'var(--white)',
@@ -49,7 +49,7 @@ const SelectCoin = ({crypto1,crypto2, handleCoinChange}) => {
 
         <div className='flex flex-col items-start'>
             <p className="text-sm font-semibold">Crypto 2</p>
-            <FormControl sx={{ width: 180 }}>
+            <FormControl sx={{ width: 160 }}>
                 <Select
                     sx={{
                         color: 'var(--white)',
