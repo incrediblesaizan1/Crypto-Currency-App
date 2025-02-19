@@ -23,7 +23,6 @@ const Hamburger = () => {
         <div className='w-[50vw] bg-[var(--black)] h-full p-6' >
         <NavLink to="/"  className={(e)=>e.isActive?"font-semibold p-[4px] text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold p-[4px] text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>Home</p></NavLink>
         <NavLink to="/compare"  className={(e)=>e.isActive?"font-semibold p-[4px] text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold p-[4px] text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>Compare</p></NavLink>
-        <NavLink to="/watchlist"  className={(e)=>e.isActive?"font-semibold p-[4px] text-[var(--white)] hover:text-[var(--white)] hover:transition-all": "font-semibold p-[4px] text-[var(--grey)] hover:text-[var(--white)] hover:transition-all"}><p>WatchList</p></NavLink>
         <NavLink to="/dashboard" className="font-semibold p-[4px] text-[var(--grey)] hover:text-[var(--white)] hover:transition-all relative left-[-17px] "><Button text="Dashboard" /></NavLink>
         </div>
       </Drawer>
