@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Dashboard from "./pages/Dashboard"
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Coin from './pages/Coin';
+import Compare from './pages/Compare';
 
 function App() {
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path:"/coin/:uuid",
     element:<Coin />,
+  },
+  {
+    path:"/compare",
+    element: <Compare />
   }
   
 ]);

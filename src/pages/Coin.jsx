@@ -23,7 +23,6 @@ const Coin = () => {
   const [priceType, setPriceType] = useState("prices");
   const [coinVolume, setCoinVolume] = useState(null);
 
-  // Fetch initial coin data
   useEffect(() => {
     const fetchCoinData = async () => {
       try {
@@ -39,7 +38,6 @@ const Coin = () => {
     fetchCoinData();
   }, [uuid]);
 
-  // Fetch chart data
   useEffect(() => {
     const fetchChartData = async () => {
       if (!coin) return; 
