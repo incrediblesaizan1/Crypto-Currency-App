@@ -15,18 +15,18 @@ const List = ({coin, i}) => {
     initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className=' m-2 px-2  w-[94vw] h-12 md:h-14 bx lg:h-20 xl:h-22  hover:bg-[var(--darkgrey)] rounded-2xl  sm:rounded-3xl flex items-center justify-center gap-4 '
+      className=' m-2 px-2  w-[94vw] h-12 md:h-14 bx lg:h-20 xl:h-22  hover:bg-[var(--darkgrey)] rounded-2xl  sm:rounded-3xl flex items-center justify-start xl:gap-28 '
       >
 
 <Tooltip title={`${coin.name} logo`}>
-      <span>
-        <img className="w-8 md:w-10 lg:w-16 xl:w-20" src={coin.iconUrl} alt="coin image" />
+      <span className='w-16 sm:w-20'>
+        <img className="w-8 md:w-8 lg:w-12 xl:w-16" src={coin.iconUrl} alt="coin image" />
       </span>
       </Tooltip>
 
 
       <Tooltip title={`Symbol`}>
-      <div className=" ml-1 sm:ml-6 md:ml-8 lg:ml-10 xl:ml-12 w-10 sm:w-12 md:w-16 lg:w-20 xl:w-24">
+      <div className=" w-16 sm:w-24 ">
         <div className=" text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl uppercase text-[var(--white)] font-semibold">
           {coin.symbol}
         </div>
@@ -40,20 +40,20 @@ const List = ({coin, i}) => {
 
  <Tooltip title={`Price Change In 24 Hours`}>
           {coin.change > 0 ? (
-            <div className="flex my-4 mx-2 sm:mx-16 md:mx-24 lg:mx-36 w-50  justify-start gap-4 items-center">
+            <div className="flex my-4 w-24 sm:w-36 md:w-44 gap-2 justify-start  items-center">
               <div className="border-2 border-solid border-[var(--green)] hover:bg-[var(--green)] hover:text-white cursor-pointer rounded-3xl py-1 md:py-2 px-2 md:px-6 text-center font-[600] text-xs sm:text-sm md:text-base text-[var(--green)]">
                 +{coin.change}%
               </div>
-              <div className=" hidden border-2 border-solid border-[var(--green)] hover:bg-[var(--green)] hover:text-white  rounded-full h-10 w-10 md:flex justify-center items-center text-[var(--green)] ">
+              <div className=" hidden border-2 w-24 mr-6  border-solid border-[var(--green)] hover:bg-[var(--green)] hover:text-white  rounded-full h-10 md:flex justify-center items-center text-[var(--green)] ">
                 <TrendingUpIcon />
               </div>
             </div>
         ) : (
-          <div className="flex my-4 mx-2 sm:mx-16 md:mx-24 lg:mx-36 w-50  justify-start gap-4 items-center">
+          <div className="flex my-4  w-24 sm:w-36 md:w-44 gap-2 justify-start items-center">
             <div className="border-2 border-solid border-[var(--red)] hover:bg-[var(--red)] hover:text-white cursor-pointer rounded-3xl py-1 md:py-2 px-2 md:px-6 text-center font-[600] text-xs sm:text-sm md:text-base text-[var(--red)]">
               {coin.change}%
             </div>
-            <div className=" hidden border-2 border-solid border-[var(--red)] hover:bg-[var(--red)] hover:text-white  rounded-full h-10 w-10 md:flex justify-center items-center text-[var(--red)] ">
+            <div className=" hidden border-2  w-24 mr-6 border-solid border-[var(--red)] hover:bg-[var(--red)] hover:text-white  rounded-full h-10  md:flex justify-center items-center text-[var(--red)] ">
               <TrendingDownIcon />
             </div>
           </div>
@@ -63,14 +63,14 @@ const List = ({coin, i}) => {
 
         <Tooltip title={` Current Price `}>
       {coin.change > 0 ? (
-        <div className=" md:m-4 lg:m-6 w-20 sm:w-24 md:w-32 lg:w-40">
-          <h3 className="text-[var(--green)] text-xs sm:text-base md:text-xl lg:text-3xl w-10 sm:w-24 md:w-32 lg:w-44 text-start font[600]">
+        <div className=" w-24 sm:w-32 ml-4 md:w-44 ">
+          <h3 className="text-[var(--green)] text-xs sm:text-base md:text-xl lg:text-3xl  text-start font[600]">
                 ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </h3>
         </div>
       ) : (
-        <div className=" md:m-4 lg:m-6 w-20 sm:w-24 md:w-32 lg:w-40">
-          <h3 className="text-[var(--red)] text-xs sm:text-base md:text-xl lg:text-3xl w-10 sm:w-24 md:w-32 lg:w-44 text-start font[600]">
+        <div className="w-24 sm:w-32 md:w-44 ">
+          <h3 className="text-[var(--red)] text-xs sm:text-base md:text-xl lg:text-3xl text-start font[600]">
                 ${Number(coin.price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </h3>
         </div>
@@ -79,17 +79,17 @@ const List = ({coin, i}) => {
 
 
 
-    <div className='hidden lg:flex md:ml-6 md:gap-16'>
+    <div className='hidden lg:flex md:gap-32 '>
 
     <Tooltip title={` Total Volume `}>
       <div>
-        <p className='text-[var(--white)] w-16 sm:w-24 lg:w-56 text-start text-[16px] md:text-[20px] font-math'>${Number(coin["24hVolume"] || 0).toLocaleString()}</p>
+        <p className='text-[var(--white)] w-16  text-start text-[16px] md:text-[20px] font-math'>${Number(coin["24hVolume"] || 0).toLocaleString()}</p>
       </div>
       </Tooltip>
 
       <Tooltip title={` Market Cap `}>
-        <div className="relative hidden lg:block">
-          <p className=" text-[var(--white)] w-56 text-start text-[20px] font-math">
+        <div className="relative hidden  lg:block">
+          <p className=" text-[var(--white)]  text-start text-[20px] font-math">
           ${Number(coin.marketCap || 0).toLocaleString()}
           </p>
         </div>
@@ -100,15 +100,15 @@ const List = ({coin, i}) => {
 
 
     <Tooltip title={` Total Volume `}>
-      <div className='hidden sm:flex lg:hidden'>
-        <p className='text-[var(--white)] w-16 sm:w-24 lg:w-56 text-start text-[16px] md:text-[20px] font-math'>${ConvertNumber(coin["24hVolume"])}</p>
+      <div className='hidden sm:flex sm:w-36 lg:hidden'>
+        <p className='text-[var(--white)]  text-start text-[16px] md:text-[20px] font-math'>${ConvertNumber(coin["24hVolume"])}</p>
       </div>
       </Tooltip>
 
           
     <Tooltip title={` Market Cap `}>
     <div className='flex lg:hidden'>
-    <p className='text-[var(--white)] w-16 sm:w-24 lg:w-56 text-start text-[16px] md:text-[20px] font-math'>${ConvertNumber(coin.marketCap)}</p>
+    <p className='text-[var(--white)]  text-start text-[16px] md:text-[20px] font-math'>${ConvertNumber(coin.marketCap)}</p>
         </div>
         </Tooltip>
 
