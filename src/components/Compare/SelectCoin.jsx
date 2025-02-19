@@ -20,7 +20,7 @@ const SelectCoin = ({crypto1,crypto2, handleCoinChange}) => {
 
 
   return (
-    <div className='flex flex-row md:flex-row gap-20 md:gap-4 items-center text-white p-4'>
+    <div className='flex flex-row md:flex-row gap-4 md:gap-4 items-center text-white p-4'>
 
         <div className='flex flex-col items-start'>
             <p className="text-sm font-semibold">Crypto 1</p>
