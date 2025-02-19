@@ -163,7 +163,7 @@ console.log(coin2Data)
         {coin1Data?<List coin={coin1Data} i={coin1Data.uuid} />:<Loader/>}
         {coin2Data?<List coin={coin2Data} i={coin2Data.uuid} />:<Loader />}
       </div>
-      <div className=" bx p-5 rounded-3xl pt-4 w-[95vw] text-center mx-auto  ">
+      <div className=" bx p-0 md:p-5 rounded-3xl pt-4 w-[95vw] text-center mx-auto  ">
           <div className="mb-3 w-[8vw]">
                   <SelectDays days={days} handleDaysChange={handleDaysChange} />
                 </div>
